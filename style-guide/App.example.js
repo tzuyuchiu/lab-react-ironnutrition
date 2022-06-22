@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       {/* Display Add Food component here */}
-
+       
       <Button> Hide Form / Add New Food </Button>
 
       {/* Display Search component here */}

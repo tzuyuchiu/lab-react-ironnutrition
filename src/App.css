@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  margin: 2%;
+  margin: 1%;
 }
 form {
-  margin-left: 20%;
+  margin-left: 2%;
   margin-bottom: 10%;
 }
 label {
@@ -17,15 +17,8 @@ input {
   justify-content: center;
 }
 .btn-create {
-  padding: 0.7rem;
+  padding: 0.5rem;
   display: block;
   margin-top: 10px;
-}
-
-.form {
-  display: block;
-}
-
-.hidden {
-  display: none;
+  /* margin-left: 10px; */
 }

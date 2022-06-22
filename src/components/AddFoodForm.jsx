@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Divider, Input } from 'antd';
+import { Divider, Input, Button } from 'antd';
 
 const AddFoodForm = ({ addFood }) => {
   const [name, setName] = useState('');
@@ -18,13 +18,13 @@ const AddFoodForm = ({ addFood }) => {
   const [showForm, setShowForm] = useState(true);
   return (
     <>
-      <button onClick={() => setShowForm(false)}> Hide </button>
+      <Button onClick={() => setShowForm(false)}> Hide </Button>
       <Divider>Add Food Entry</Divider>
       {showForm ? (
         <form action="#" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name</label>
-            <input
+            <Input
               type="text"
               name="name"
               id="name"
@@ -37,7 +37,7 @@ const AddFoodForm = ({ addFood }) => {
           </div>
           <div>
             <label htmlFor="image">Image URL</label>
-            <input
+            <Input
               type="text"
               name="image"
               id="image"
@@ -47,7 +47,7 @@ const AddFoodForm = ({ addFood }) => {
           </div>
           <div>
             <label htmlFor="calories">Calories</label>
-            <input
+            <Input
               type="number"
               name="calories"
               id="calories"
@@ -59,7 +59,7 @@ const AddFoodForm = ({ addFood }) => {
           </div>
           <div>
             <label htmlFor="servings">Servings</label>
-            <input
+            <Input
               type="number"
               name="servings"
               id="servings"
@@ -69,12 +69,15 @@ const AddFoodForm = ({ addFood }) => {
               }}
             />
           </div>
+          {/* <Button className="btn-create" type="submit">
+            Create
+          </Button> */}
           <button className="btn-create" type="submit">
             Create
           </button>
         </form>
       ) : (
-        <button onClick={() => setShowForm(true)}> Add New Food </button>
+        <Button onClick={() => setShowForm(true)}> Add New Food </Button>
       )}
     </>
   );
